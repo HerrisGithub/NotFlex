@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import ProfileHCompound from "../compounds/ProfileHCompound";
-import RecommendationCompound from "../compounds/RecommendationCompound";
-import DownloadedCompound from "../compounds/DownloadedCompound";
 import { useHistory } from "react-router-dom";
+// import UserInfo from "../components/UserInfo";
+// import SubscriptionStatus from "../components/SubscriptionStatus";
+// import RecentlyWatched from "../components/RecentlyWatched";~
 
 function ProfilePage() {
   const history = useHistory();
@@ -19,23 +20,16 @@ function ProfilePage() {
       style={{
         display: "flex",
         flexDirection: "column",
-        gap: "20px",
-        height: "100vh",
-        backgroundColor: "#141414",
-        paddingTop: "10%",
         alignItems: "center",
-        justifyContent: "",
+        gap: "20px",
       }}
     >
       <ProfileHCompound user={user} onSignOut={onSignOut} />
-      <RecommendationCompound />
-        <DownloadedCompound />
-        {/* <UserInfo /> */}
-        {/* <SubscriptionStatus /> */}
-        {/* <RecentlyWatched /> */}
+      {/* <UserInfo /> */}src/pages/ProfilePage.jssrc/pages/ProfilePage.js
+      {/* <SubscriptionStatus /> */}
+      {/* <RecentlyWatched /> */}
     </div>
   );
-
 }
 
 export default ProfilePage;

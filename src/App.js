@@ -5,6 +5,7 @@ import SigninPage from "./pages/SigninPage";
 import SignupPage from "./pages/SignupPage";
 import BrowsePage from "./pages/BrowsePage";
 import ProfilePage from "./pages/ProfilePage";
+import StreamVideoPage from "./pages/StreamVideoPage";
 
 function App() {
   return (
@@ -24,6 +25,9 @@ function App() {
         </Route>
         <Route path="/profile">
           <ProfilePage />
+        </Route>
+        <Route path="/video">
+          <StreamVideoPage />
         </Route>
       </Switch>
     </Router>

@@ -39,6 +39,7 @@ function SignupPage() {
           Password: password,
         }
       );
+      history.push("/signin");
     } catch (error) {
       alert(error.message);
     }
