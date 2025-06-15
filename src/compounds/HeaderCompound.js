@@ -23,7 +23,20 @@ function HeaderCompound({ children }) {
         {Token == null ? (
           <SigninButton>Sign In</SigninButton>
         ) : (
-          <a className="signin-button" href="#" onClick={switchProfileTab}>
+          <a
+            className="signin-button"
+            href="#"
+            onClick={switchProfileTab}
+            style={{
+              display: "inline-block",
+              minWidth: "100px",
+              padding: "8px 16px",
+              fontSize: "1rem",
+              whiteSpace: "nowrap",
+              width: "auto",
+              textAlign: "center",
+            }}
+          >
             {Email}
           </a>
         )}

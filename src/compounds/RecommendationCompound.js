@@ -3,13 +3,28 @@ import React from "react";
 
 const Recommendation = () => {
 return (
-    <div className="recommendation">
+    <div
+        className="recommendation"
+        style={{
+            display: "flex",
+            flexDirection: "column",
+            gap: "20px",
+            backgroundColor: "#141414",
+            alignItems: "center",
+            padding: "20px",
+            border: "2px solid #fff",
+            borderRadius: "30px", // Added circular edged border
+            marginLeft: "5%", // Added margin for spacing
+            marginRight: "5%", // Added margin for spacing
+        }}
+    >
         <h2 className="recommendation__title">Recommended for You</h2>
         <div className="recommendation__list">
-            <div className="recommendation__item">Movie 1</div>
-            <div className="recommendation__item">Movie 2</div>
-            <div className="recommendation__item">Movie 3</div>
-            <div className="recommendation__item">Movie 4</div>
+            {["Movie 1", "Movie 2", "Movie 3", "Movie 4"].map((movie, idx) => (
+                <div className="recommendation__item" key={idx}>
+                    {movie}
+                </div>
+            ))}
         </div>
     </div>
 );

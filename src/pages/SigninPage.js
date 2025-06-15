@@ -39,9 +39,10 @@ function SigninPage() {
       );
       // response.data.Token;
       // response.data.Email;
-      const { Token, Email } = response.data;
+      const { Token, Email, FullName } = response.data;
       localStorage.setItem("Token", Token);
       localStorage.setItem("Email", Email);
+      localStorage.setItem("FullName", FullName);
       // window.location.href = "/browse";
       history.push("/");
     } catch (error) {}

@@ -1,16 +1,33 @@
 import React from "react";
 // import './ProfileHCompound.css';
 
-const ProfileHeader = ({ user, onSignOut }) => {
+const ProfileHCompound = ({ user, onSignOut }) => {
 return (
-    <div className="profile-header">
+    <div
+        className="profile-header"
+        style={{
+            display: "flex",
+            flexDirection: "column",
+            gap: "20px",
+            backgroundColor: "#141414",
+            alignItems: "center",
+            padding: "20px",
+        }}
+    >
         <div className="profile-header__info">
             <img
                 className="profile-header__avatar"
-                src={user.avatar || "/default-avatar.png"}
+                src={user.Avatar || "/default-avatar.png"}
                 alt="User Avatar"
+                style={{
+                    borderRadius: "50%", // Make avatar circular
+                    width: "80px",
+                    height: "80px",
+                    objectFit: "cover",
+                    border: "2px solid var(--border-color, white)"
+                }}
             />
-            <h2 className="profile-header__name">{user.name}</h2>
+            <h2 className="profile-header__name">{user.FullName}</h2>
         </div>
         <button
             className="profile-header__signout"
@@ -19,6 +36,7 @@ return (
                 padding: "10px 20px",
                 backgroundColor: "var(--button-bg, )",
                 color: "var(--button-color, darkgray)",
+                borderRadius: "12px" // Rounded button
             }}
         >
             Sign Out
@@ -27,4 +45,4 @@ return (
 );
 };
 
-export default ProfileHeader;
+export default ProfileHCompound;
